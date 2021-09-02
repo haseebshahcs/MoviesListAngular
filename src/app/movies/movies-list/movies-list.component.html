@@ -1,1 +1,8 @@
-<p>movies-list works!</p>
+<h2>Movies Data</h2>
+<img src="https://i.gifer.com/ZZ5H.gif" alt="Nothing">
+<div *ngIf="movies?.length === 0">There is no record to display</div>
+<div *ngFor="let movie of movies; let _index = index;">
+    <div>{{_index}}) {{movie.title}}</div>
+    <div>{{movie.releaseDate | date:"dd-MMM-yyyy" | uppercase}}</div>
+    <div>{{movie.price | currency}}</div>
+</div>
