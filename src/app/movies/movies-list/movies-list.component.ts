@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-movies-list',
@@ -7,16 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MoviesListComponent implements OnInit {
 
+  @Input()
   movies: any;
   constructor() { }
 
   ngOnInit(): void {
-    setTimeout(() => {
-      this.movies = [
-        { title: 'Spiderman', releaseDate: new Date(), price: 50 },
-        { title: 'Spiderwomen', releaseDate: new Date(-1), price: 50 }
-      ]
-    }, 2000);
+  }
 
+  remove(index: number) {
+    this.movies.splice(index, 1);
   }
 }

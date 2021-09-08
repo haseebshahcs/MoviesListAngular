@@ -1,8 +1,13 @@
-<h2>Movies Data</h2>
-<img src="https://i.gifer.com/ZZ5H.gif" alt="Nothing">
-<div *ngIf="movies?.length === 0">There is no record to display</div>
-<div *ngFor="let movie of movies; let _index = index;">
-    <div>{{_index}}) {{movie.title}}</div>
-    <div>{{movie.releaseDate | date:"dd-MMM-yyyy" | uppercase}}</div>
-    <div>{{movie.price | currency}}</div>
-</div>
+<img *ngIf="!movies" src="https://i.gifer.com/ZZ5H.gif" alt="Nothing">
+
+<ng-container *ngIf="movies && movies.length > 0">
+    <div *ngIf="movies?.length === 0">There is no record to display</div>
+    <div *ngFor="let movie of movies; let _index = index;" class="movie-container">
+        <div>{{_index}}) {{movie.title}}
+            <button style="margin-left: 1rem;" (click)="remove(_index)">Remove</button>
+        </div>
+
+        <div>{{movie.releaseDate | date:" dd-MMM-yyyy " | uppercase}}</div>
+        <div>{{movie.price | currency}}</div>
+    </div>
+</ng-container>
