@@ -10,6 +10,20 @@ export class AppComponent implements OnInit {
     this.moviesInTheaters = [
       { title: 'Spiderman', releaseDate: new Date(), price: 50 },
       { title: 'Spiderwomen', releaseDate: new Date(-1), price: 50 },
+      { title: 'Spiderman', releaseDate: new Date(), price: 50 },
+      { title: 'Spiderwomen', releaseDate: new Date(-1), price: 50 },
+      { title: 'Spiderman', releaseDate: new Date(), price: 50 },
+      { title: 'Spiderwomen', releaseDate: new Date(-1), price: 50 },
+      { title: 'Spiderman', releaseDate: new Date(), price: 50 },
+      { title: 'Spiderwomen', releaseDate: new Date(-1), price: 50 },
+      { title: 'Spiderman', releaseDate: new Date(), price: 50 },
+      { title: 'Spiderwomen', releaseDate: new Date(-1), price: 50 },
+      { title: 'Spiderman', releaseDate: new Date(), price: 50 },
+      { title: 'Spiderwomen', releaseDate: new Date(-1), price: 50 },
+      { title: 'Spiderman', releaseDate: new Date(), price: 50 },
+      { title: 'Spiderwomen', releaseDate: new Date(-1), price: 50 },
+      { title: 'Spiderman', releaseDate: new Date(), price: 50 },
+      { title: 'Spiderwomen', releaseDate: new Date(-1), price: 50 },
     ];
     this.moviesFutureReleases = [];
   }
