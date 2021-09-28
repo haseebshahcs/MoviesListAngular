@@ -11,10 +11,7 @@ export class AppComponent implements OnInit {
       { title: 'Spiderman', releaseDate: new Date(), price: 50 },
       { title: 'Spiderwomen', releaseDate: new Date(-1), price: 50 },
     ];
-    this.moviesFutureReleases = [
-      { title: 'Spiderman1', releaseDate: new Date(), price: 50 },
-      { title: 'Spiderwomen2', releaseDate: new Date(-1), price: 50 },
-    ];
+    this.moviesFutureReleases = [];
   }
   moviesInTheaters: any;
   moviesFutureReleases: any;
